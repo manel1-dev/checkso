@@ -1,0 +1,18 @@
+ALGORITHM sorted
+VAR
+    arr: ARRAY_OF INTEGER ;
+    i,pos,p : INTEGER ;
+
+BEGIN
+    
+
+    FOR i FROM 0 TO n-1 STEP 1  DO
+        p=arr[i];
+        pos=i-1;
+    WHILE (pos>0 and arr[pos]>p) DO
+        arr[pos+1]=arr[pos];
+        pos=pos-1;
+    END_WHILE
+    arr[pos+1]=p;
+    END_FOR
+END
